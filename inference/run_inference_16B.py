@@ -35,7 +35,8 @@ for text in texts:
     # Generate output
     output = model.generate(**input, max_new_tokens=100)
     # Decode and print result
-    result = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    print(f'input text: ${text}')
-    print(f'output text: ${result}')
+    result = tokenizer.decode(output[0], skip_special_tokens=True)
+    print(f'input text:\n{text}')
+    print(f'output text:\n{result}')
+    print(f'\n\n')
 
